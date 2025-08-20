@@ -8,13 +8,13 @@ graph TD
     C --> D["Calcular IMC"]
     D --> E{"Si IMC < 18.5?"}
     E -- Sí --> F["Mostrar bajo peso"]
-    F --> L
     E -- No --> G{"Si IMC >= 18.5 y < 25?"}
     G -- Sí --> H["Mostrar peso normal"]
     G -- No --> I{"Si IMC >= 25 y < 30?"}
     I -- Sí --> J["Mostrar sobrepeso"]
     I -- No --> K["Mostrar obeso"]
 
+    F --> L
     H --> L
     J --> L
     K --> L["Mostrar IMC y llamar a otra consulta"]
