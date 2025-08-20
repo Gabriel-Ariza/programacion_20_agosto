@@ -17,7 +17,7 @@ graph TD
     F --> L;
     H --> L;
     J --> L;
-    K --> L[Mostrar IMC y llamar a otra_consulta()];
+    K --> L[Mostrar IMC y llamar a otra_consulta];
 
     L --> M{Solicitar si desea otra consulta};
     M -- "1. Sí" --> B;
