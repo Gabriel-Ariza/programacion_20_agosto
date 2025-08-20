@@ -4,7 +4,7 @@
 graph TD
     A[Inicio] --> B{Llamar a calcular_imc};
 
-    B --> C[Solicitar peso y altura];
+    B --> C{Solicitar peso y altura};
     C --> D[Calcular IMC];
     D --> E{Si IMC < 18.5?};
     E --Sí--> F[Mostrar "bajo peso"];
