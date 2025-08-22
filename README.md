@@ -17,10 +17,9 @@ graph TD
     F --> L
     H --> L
     J --> L
-    K --> L["Mostrar IMC y llamar función otra consulta?"]
+    K --> L["Mostrar IMC y preguntar: "]
 
     L --> M["Desea hacer otra consulta"]
     M -- "1. Sí" --> B
     M -- "2. No" --> N["Mostrar Gracias y terminar"]
-    O --> M
 ```
