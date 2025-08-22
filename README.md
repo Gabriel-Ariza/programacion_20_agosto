@@ -24,32 +24,22 @@ graph TD
     M -- "2. No" --> N["Mostrar Gracias y terminar"]
 ```
 
-
 ```mermaid
 flowchart TD
-    A[Inicio] --> B[/Ingresar total_compra/];
-    B --> C[/Ingresar valor_pagado/];
-    C --> D[Calcular cambio = valor_pagado - total_compra];
-    D --> E{Es cambio >= 0 Y<br>cambio % 500 == 0?};
-    E -- Sí --> F[Calcular b50000 = cambio DIV 50000];
-    F --> G[Actualizar cambio = cambio MOD 50000];
-    G --> H[Calcular b20000 = cambio DIV 20000];
-    H --> I[Actualizar cambio = cambio MOD 20000];
-    I --> J[Calcular b10000 = cambio DIV 10000];
-    J --> K[Actualizar cambio = cambio MOD 10000];
-    K --> L[Calcular b5000 = cambio DIV 5000];
-    L --> M[Actualizar cambio = cambio MOD 5000];
-    M --> N[Calcular b2000 = cambio DIV 2000];
-    N --> O[Actualizar cambio = cambio MOD 2000];
-    O --> P[Calcular b1000 = cambio DIV 1000];
-    P --> Q[Actualizar cambio = cambio MOD 1000];
-    Q --> R[Calcular m500 = cambio DIV 500];
-    R --> S[Actualizar cambio = cambio MOD 500];
-    S --> T[/Mostrar desglose del cambio/];
-    T --> U[/Mostrar total_devuelta/];
-    U --> V[Fin];
-    E -- No --> W[/Mostrar mensaje de error/];
-    W --> V;
+    A[Inicio] --> B[/Paso 1: Ingresa el total de la compra/];
+    B --> C[/Paso 2: Ingresa el valor que te pagaron/];
+    C --> D[Paso 3: Calcula el cambio: lo que te pagaron - la compra];
+    D --> E{Paso 4: El cambio es <br>suficiente y válido?};
+    E -- Sí --> F[Paso 5: Calcula cuántos billetes de 50.000 das<br>y guarda lo que queda del cambio];
+    F --> G[Paso 6: Con lo que queda, calcula cuántos billetes de 20.000 das<br>y guarda lo que queda del cambio];
+    G --> H[Paso 7: Con lo que queda, calcula cuántos billetes de 10.000 das<br>y guarda lo que queda del cambio];
+    H --> I[Paso 8: Con lo que queda, calcula cuántos billetes de 5.000 das<br>y guarda lo que queda del cambio];
+    I --> J[Paso 9: Con lo que queda, calcula cuántos billetes de 2.000 das<br>y guarda lo que queda del cambio];
+    J --> K[Paso 10: Con lo que queda, calcula cuántos billetes de 1.000 das<br>y guarda lo que queda del cambio];
+    K --> L[Paso 11: Con lo que queda, calcula cuántas monedas de 500 das<br>y guarda lo que queda del cambio];
+    L --> M[/Paso 12: Muestra la cantidad de cada billete y moneda/];
+    M --> N[/Paso 13: Muestra el total del cambio entregado/];
+    N --> O[Fin];
+    E -- No --> P[/Paso 14: Muestra el mensaje de error/];
+    P --> O;
 ```
-    G --> I[Fin];
-    H --> I;
