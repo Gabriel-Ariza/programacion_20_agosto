@@ -2,7 +2,7 @@
 
 ```mermaid
 graph TD
-    A[Inicio] --> B["Función calcular imc"]
+    A[Inicio] --> B["Llamar función calcular IMC"]
 
     B --> C["Solicitar peso y altura"]
     C --> D["Calcular IMC"]
@@ -17,11 +17,10 @@ graph TD
     F --> L
     H --> L
     J --> L
-    K --> L["Mostrar IMC y llamar a otra consulta"]
+    K --> L["Mostrar IMC y llamar función otra consulta?"]
 
     L --> M["Desea hacer otra consulta"]
     M -- "1. Sí" --> B
     M -- "2. No" --> N["Mostrar Gracias y terminar"]
-    M -- "Opción no válida" --> O["Mensaje de error"]
     O --> M
 ```
