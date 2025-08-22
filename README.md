@@ -31,12 +31,12 @@ flowchart TD
     C --> D[Calcular cambio = valor_pagado - total_compra];
     D --> E{Paso 4: El cambio es <br>suficiente y válido?};
     E -- Sí --> F[Calcula cuántos billetes de 50.000 da<br>y guarda el cambio restante];
-    F --> G[Con lo que queda, calcula cuántos billetes de 20.000 da<br>y guarda el cambio restante];
-    G --> H[Con lo que queda, calcula cuántos billetes de 10.000 das<br>y guarda el cambio restante];
-    H --> I[Con lo que queda, calcula cuántos billetes de 5.000 das<br>y guarda el cambio restante];
-    I --> J[Con lo que queda, calcula cuántos billetes de 2.000 das<br>y guarda el cambio restante];
-    J --> K[Con lo que queda, calcula cuántos billetes de 1.000 das<br>y guarda el cambio restante];
-    K --> L[Con lo que queda, calcula cuántas monedas de 500 das<br>y guarda el cambio restante];
+    F --> G[calcula cuántos billetes de 20.000 da y guarda el cambio restante];
+    G --> H[calcula cuántos billetes de 10.000 da y guarda el cambio restante];
+    H --> I[calcula cuántos billetes de 5.000 da y guarda el cambio restante];
+    I --> J[calcula cuántos billetes de 2.000 da y guarda el cambio restante];
+    J --> K[calcula cuántos billetes de 1.000 da y guarda el cambio restante];
+    K --> L[calcula cuántas monedas de 500 da y guarda el cambio restante];
     L --> M[/Muestra la cantidad de cada billete y moneda/];
     M --> N[/Muestra el total del cambio entregado/];
     N --> O[Fin];
