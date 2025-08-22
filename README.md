@@ -29,7 +29,7 @@ flowchart TD
     A[Inicio] --> B[/Ingresar total_compra/];
     B --> C[/Ingresar valor_pagado/];
     C --> D[Calcular cambio = valor_pagado - total_compra;
-    D --> E{El cambio es suficiente y válido?};
+    D --> E{Paso 4: El cambio es <br>suficiente y válido?};
     E -- Sí --> F[Calcula cuántos billetes de 50.000 da<br>y guarda el cambio restante];
     F --> G[Con lo que queda, calcula cuántos billetes de 20.000 da<br>y guarda el cambio restante];
     G --> H[Con lo que queda, calcula cuántos billetes de 10.000 das<br>y guarda el cambio restante];
